@@ -19,8 +19,11 @@ public class IndexController {
     }
 
     @RequestMapping("/mindex")
-    public String mlogin() {
+    /*public String mlogin() {
         return "mindex_";
+    }*/
+    public String mlogin() {
+        return "index";
     }
 
 }
