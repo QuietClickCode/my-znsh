@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/element-ui.min.css">
+    <title>首页</title>
+
+
+</head>
+<body>
+<div id="app" style="display: none">
+<h1>{{msg}}</h1>
+</div>
+<script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/vue.min.js" type="text/javascript"></script>
+<script src="/js/element-ui.min.js" type="text/javascript"></script>
+<script>
+    var store = {
+
+        msg:"我是首页哦!"
+    }
+    var vue = new  Vue({
+        el:"#app",
+        data:store,
+        created: function() {
+            $("#app").show();
+        }
+    })
+</script>
+</body>
+</html>

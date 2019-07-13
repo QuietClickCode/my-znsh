@@ -20,7 +20,7 @@ public class IndexController {
 
     @RequestMapping("/mindex")
     public String mlogin() {
-        return "mindex";
+        return "mindex_";
     }
 
 }
