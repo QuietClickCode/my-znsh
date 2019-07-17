@@ -1,0 +1,16 @@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+server:
+  port: 8081
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/znsh?useUnicode=true&characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    prefix: classpath:/template/
+    suffix: .html
