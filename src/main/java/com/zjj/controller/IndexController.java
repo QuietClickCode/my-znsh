@@ -3,6 +3,8 @@ package com.zjj.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Map;
+
 /**
  * @program: znsh
  * @description: 用户控制器
@@ -14,9 +16,11 @@ public class IndexController {
 
 
     @RequestMapping("/index")
-    public String login() {
+    public String login(Map<String, Object> map) {
+        map.put("name", "智能生活商城");
         return "index";
     }
+
 
     @RequestMapping("/mindex")
     /*public String mlogin() {
