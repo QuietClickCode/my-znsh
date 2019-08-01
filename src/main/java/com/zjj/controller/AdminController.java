@@ -5,12 +5,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/manage-web")
 public class AdminController {
-    @RequestMapping("/{parameter}")
+   /* @RequestMapping("/{parameter}")
     public String parameter(@PathVariable("parameter") String parameter) {
 
+        System.out.println(parameter);
         return parameter;
+    }*/
+
+   private static final String FIRSTURL = "/manage-web/";
+    @RequestMapping("/{page}")
+    public String showPage(@PathVariable String page) {
+        System.out.println(page);
+        return FIRSTURL + page;
     }
+
+   /* @RequestMapping("/manage/index")
+    public String parameter() {
+
+        return "manage/index";
+    }*/
 
 
 
