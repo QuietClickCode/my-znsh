@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/manage-web")
-public class AdminController {
+public class ManageWebController {
    /* @RequestMapping("/{parameter}")
     public String parameter(@PathVariable("parameter") String parameter) {
 
