@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/SSO-web")
+@RequestMapping("/sso-web")
 public class SSOWebController {
    /* @RequestMapping("/{parameter}")
     public String parameter(@PathVariable("parameter") String parameter) {
@@ -14,7 +14,7 @@ public class SSOWebController {
         return parameter;
     }*/
 
-   private static final String FIRSTURL = "/SSO-web/";
+   private static final String FIRSTURL = "/sso-web/";
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page) {
         System.out.println(page);
