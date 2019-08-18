@@ -23,19 +23,18 @@ public class UserController {
 
     @RequestMapping("/")
     public String tologin() {
-        
+
         return "login";
     }
 
 
-
-    /** 
-    * @Description: login
-    * @Param: [] 
-    * @return: java.lang.String 
-    * @Author: zjj
-    * @Date: 2019/7/6 
-    */ 
+    /**
+     * @Description: login
+     * @Param: []
+     * @return: java.lang.String
+     * @Author: zjj
+     * @Date: 2019/7/6
+     */
     @RequestMapping("/login")
     @ResponseBody
     public ResultData login(String username, String password) {
@@ -45,6 +44,23 @@ public class UserController {
         ResultData resultData = new ResultData();
         resultData.setStatus("200");
         resultData.setMsg("登录成功");
+        return resultData;
+    }
+
+    @RequestMapping("/user/login")
+    @ResponseBody
+    public ResultData userLogin(String username, String password) {
+        // System.out.println(username + "-" + password);
+        User user = userService.login(username, password);
+        System.out.println(user);
+        ResultData resultData = new ResultData();
+        if (user != null) {
+            resultData.setStatus("200");
+            resultData.setMsg("登录成功");
+        } else {
+            resultData.setStatus("500");
+            resultData.setMsg("用户名或密码错误");
+        }
         return resultData;
     }
 }

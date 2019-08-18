@@ -7,12 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/item-web")
 public class ItemWebController {
-   /* @RequestMapping("/{parameter}")
-    public String parameter(@PathVariable("parameter") String parameter) {
-
-        System.out.println(parameter);
-        return parameter;
-    }*/
 
    private static final String FIRSTURL = "/item-web/";
     @RequestMapping("/{page}")
